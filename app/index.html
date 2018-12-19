@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <script src="app.module.js"></script>
+
+    <script src="router.config.js"></script>
+
+    <script src="first-module/FirstModule.js"></script>
+    <script src="second-module/SecondModule.js"></script>
+    <title>Coursera AngularJS</title>
+</head>
+<body ng-app="app">
+
+<div class="container">
+    <nav class="nav">
+        <a class="navbar-brand" href="#">Coursera AngularJS</a>
+        <a class="nav-link nav-item justify-content-center" ui-sref="module-1" ui-sref-active="active">First Module</a>
+        <a class="nav-link nav-item justify-content-center" ui-sref="module-2" ui-sref-active="active">Second Module</a>
+
+    </nav>
+    <ui-view></ui-view>
+</div>
+
+</body>
+</html>
