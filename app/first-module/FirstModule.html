@@ -1,5 +1,10 @@
-<h1>First module</h1>
-
-<p>
-    {{vm.someData.text }}
-</p>
+<div>
+    <h1>First module assignment: </h1>
+    <form name="foodForm">
+        <input type="text" required placeholder="Tell me what you had to eat" ng-model="vm.foodList">
+    </form>
+    <button class="btn btn-primary margin-around" ng-click="vm.checkFoodAmount()" ng-disabled="foodForm.$invalid">Check if
+        too much
+    </button>
+    <h6>{{vm.message}}</h6>
+</div>
