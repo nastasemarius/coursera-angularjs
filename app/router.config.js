@@ -19,6 +19,6 @@
             templateUrl: 'app/second-module/SecondModule.html'
         })
 
-        $urlRouterProvider.otherwise('/module-1');
+        $urlRouterProvider.otherwise('/module-2');
     }
 }());
