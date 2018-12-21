@@ -1,4 +1,6 @@
-(function(){
+(function() {
+    'use strict';
+
     angular.module('app.secondModule')
         .factory('ShoppingListFactory', ShoppingListFactory)
         .provider('ShoppingService',ShoppingListProvider)

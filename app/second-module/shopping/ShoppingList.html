@@ -1,5 +1,7 @@
 <div>
+    <br>
     <h3>Shopping lists with diferent services:</h3>
+    <br>
     <div>
         <h6>Shopping lists with Factory Services:</h6>
         <div ng-controller="ShoppingList1 as list1">
@@ -9,7 +11,7 @@
             <input type="text" placeholder="item" ng-model="list1.newItem.name">
             <input type="text" placeholder="quantity" ng-model="list1.newItem.quantity">
             <button ng-click="list1.addNewItem(list1.newItem)" class="btn btn-sm btn-primary">Add item</button>
-            <span class="alert-warning">{{list1.error}}</span>L
+            <span class="alert-warning">{{list1.error}}</span>
             <ul>
                 <li ng-repeat="item in list1.items">{{$index +1}}. {{item.quantity}} of {{ item.name }}
                     <button ng-click="list1.removeListItem($index)" class="btn btn-sm btn-warning">Remove</button>

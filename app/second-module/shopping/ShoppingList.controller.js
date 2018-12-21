@@ -1,4 +1,6 @@
-(function(){
+(function() {
+    'use strict';
+
     angular.module('app.secondModule')
         .controller('ShoppingListShell',ShoppingListShell)
         .controller('ShoppingList1', ShoppingList1)

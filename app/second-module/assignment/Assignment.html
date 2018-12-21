@@ -1,3 +1,31 @@
 <div>
-    <h3>Assignment</h3>
+    <br>
+    <h3>Shopping List</h3>
+    <br>
+    <div ng-controller="ToBuyController as wishListVm">
+        <div ng-show="wishListVm.wishList.length">
+            <h6>WishList Items:</h6>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="wantedItem in wishListVm.wishList">
+                    <div class="list-container">
+                        <span class="list-title">{{wantedItem}}</span>
+                        <button class="list-button btn btn-sm btn-primary" ng-click="wishListVm.buyItem($index)">Buy
+                        </button>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+
+    <div ng-controller="AlreadyBoughtController as alreadyBoughtVm">
+        <div ng-show="alreadyBoughtVm.alreadyBought.length">
+            <h6>Already Bought Items:</h6>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="boughtItem in alreadyBoughtVm.alreadyBought">
+                    {{boughtItem}}
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

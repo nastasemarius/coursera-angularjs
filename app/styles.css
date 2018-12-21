@@ -4,3 +4,7 @@
 .margin-around{
     margin: 10px 0px 10px 0px;
 }
+
+.list-button{
+    float: right;
+}
