@@ -1,8 +1,5 @@
-<div ng-controller="SecondModule as vm">
-    <h1>Second Module</h1>
-    <button class="btn btn-info" ng-click="vm.show = !vm.show">Toggle ControllerAs Syntax</button>
-
-    <div ng-controller="ParentController as parent" ng-if="vm.show">
+<div>
+    <div ng-controller="ParentController as parent">
         <h3>ControllerAs Syntax: </h3>
         <p>Parent value: {{parent.value}}</p>
         <button class="btn btn-info" ng-click="parent.changeValue()">Change value</button>
@@ -13,5 +10,3 @@
         </div>
     </div>
 </div>
-
-

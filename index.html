@@ -14,7 +14,15 @@
     <script src="app/router.config.js"></script>
 
     <script src="app/first-module/FirstModule.js"></script>
-    <script src="app/second-module/SecondModule.js"></script>
+
+    <!--Second module-->
+    <script src="app/second-module/second.module.js"></script>
+    <script src="app/second-module/second.module.config.js"></script>
+    <script src="app/second-module/shell/Second.controller.js"></script>
+    <script src="app/second-module/inheritance/Inheritance.controller.js"></script>
+    <script src="app/second-module/shopping/shopping-list.service.js"></script>
+    <script src="app/second-module/shopping/ShoppingList.controller.js"></script>
+    <script src="app/second-module/assignment/Assignment.controller.js"></script>
     <title>Coursera AngularJS</title>
 </head>
 <body ng-app="app">
@@ -22,8 +30,8 @@
 <div class="container">
     <nav class="nav">
         <a class="navbar-brand" href="#">Coursera AngularJS</a>
-        <a class="nav-link nav-item justify-content-center" ui-sref="module-1" ui-sref-active="active">First Module</a>
-        <a class="nav-link nav-item justify-content-center" ui-sref="module-2" ui-sref-active="active">Second Module</a>
+        <a class="nav-link nav-item justify-content-center" ui-sref="first" ui-sref-active="active">First Module</a>
+        <a class="nav-link nav-item justify-content-center" ui-sref="second.shopping" ui-sref-active="active">Second Module</a>
 
     </nav>
     <ui-view></ui-view>

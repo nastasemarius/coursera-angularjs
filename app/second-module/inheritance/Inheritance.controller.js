@@ -1,11 +1,16 @@
-(function () {
-    'use strict';
+(function(){
 
-    angular.module('app')
-        .controller('SecondModule', SecondModule)
+    angular.module('app.secondModule')
+        .controller('InheritanceShellController',InheritanceShell)
         .controller('ParentController', ParentController)
         .controller('ChildController', ChildController)
 
+    InheritanceShell.$inject = [];
+    function InheritanceShell(){
+        var vm = this;
+    }
+
+    ParentController.$inject = [];
     function ParentController() {
         var vm = this;
         vm.value = 1;
@@ -15,7 +20,6 @@
     }
 
     ChildController.$inject = ['$scope']
-
     function ChildController($scope) {
         var vm = this;
         vm.check = function (parent) {
@@ -26,10 +30,4 @@
             console.log('THIRD: $scope.$parent.parent.value = ', $scope.$parent.parent.value, parent.value);
         }
     }
-
-    SecondModule.$inject = [];
-
-    function SecondModule() {
-        var vm = this;
-    }
-}())
+})();

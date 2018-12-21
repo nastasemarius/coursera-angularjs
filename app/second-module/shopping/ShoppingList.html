@@ -1,0 +1,51 @@
+<div>
+    <h3>Shopping lists with diferent services:</h3>
+    <div>
+        <h6>Shopping lists with Factory Services:</h6>
+        <div ng-controller="ShoppingList1 as list1">
+            <p>
+                {{ list1.rules | json }}
+            </p>
+            <input type="text" placeholder="item" ng-model="list1.newItem.name">
+            <input type="text" placeholder="quantity" ng-model="list1.newItem.quantity">
+            <button ng-click="list1.addNewItem(list1.newItem)" class="btn btn-sm btn-primary">Add item</button>
+            <span class="alert-warning">{{list1.error}}</span>L
+            <ul>
+                <li ng-repeat="item in list1.items">{{$index +1}}. {{item.quantity}} of {{ item.name }}
+                    <button ng-click="list1.removeListItem($index)" class="btn btn-sm btn-warning">Remove</button>
+                </li>
+            </ul>
+        </div>
+        <div ng-controller="ShoppingList2 as list2">
+            <p>
+                {{ list2.rules | json }}
+            </p>
+            <input type="text" placeholder="item" ng-model="list2.newItem.name">
+            <input type="text" placeholder="quantity" ng-model="list2.newItem.quantity">
+            <button ng-click="list2.addNewItem(list2.newItem)" class="btn btn-sm btn-primary">Add item</button>
+            <span class="alert-warning">{{list2.error}}</span>
+            <ul>
+                <li ng-repeat="item in list2.items">{{$index +1}}. {{item.quantity}} of {{ item.name }}
+                    <button ng-click="list2.removeListItem($index)" class="btn btn-sm btn-warning">Remove</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div ng-controller="ShoppingList3 as list3">
+        <h6>Shopping list with Provider Services: </h6>
+        <p>
+            {{ list3.rules | json }}
+        </p>
+        <input type="text" placeholder="item" ng-model="list3.newItem.name">
+        <input type="text" placeholder="quantity" ng-model="list3.newItem.quantity">
+        <button ng-click="list3.addNewItem(list3.newItem)" class="btn btn-sm btn-primary">Add item</button>
+        <span class="alert-warning">{{list3.error}}</span>
+        <ul>
+            <li ng-repeat="item in list3.items">{{$index +1}}. {{item.quantity}} of {{ item.name }}
+                <button ng-click="list3.removeListItem($index)" class="btn btn-sm btn-warning">Remove</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
